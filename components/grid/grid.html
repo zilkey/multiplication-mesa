@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th></th>
+      <th ng-class="{'th-highlighted': grid.highlight.x === x}" class="text-center" ng-repeat="(x, _) in grid.data">
+        {{x}}
+      </th>
+    </tr>
+    <tr ng-repeat="(y,inner) in grid.data">
+      <th ng-class="{'th-highlighted': grid.highlight.y === y}" class="text-center">{{y}}</th>
+      <td ng-class="{'td-correct': result.answer == result.correctAnswer}" class="td-input" ng-repeat="(x,result) in inner">
+        <input type="text"
+          data-x="{{x}}"
+          data-y="{{y}}"
+          ng-model="result.answer"
+          ng-focus="grid.onFocus(x,y)"
+          ng-keyup="grid.onKeyUp($event, x, y)"
+          >
+      </td>
+    </tr>
+  </tbody>
+</table>

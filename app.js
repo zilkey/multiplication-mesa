@@ -1,7 +1,7 @@
-angular.module('myApp', ['ngNewRouter', 'app.home'])
+angular.module('myApp', ['ngNewRouter', 'app.grid'])
   .controller('AppController', ['$router', AppController]);
 
 AppController.$routeConfig = [
-  {path: '/', component: 'home' }
+  {path: '/', component: 'grid' }
 ];
 function AppController ($router) {}

@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   <base href="/">
-  <title>My app</title>
+  <title>Multiplication Mesa</title>
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.min.css" media="screen">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" href="/app.css" media="screen">
 </head>
 <body ng-app="myApp" ng-controller="AppController as app">
   <div ng-viewport></div>
 
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
   <script src="/node_modules/angular/angular.js"></script>
   <script src="/node_modules/angular-new-router/dist/router.es5.js"></script>
-  <script src="/components/home/home.js"></script>
+  <script src="/components/grid/grid.js"></script>
   <script src="/app.js"></script>
 </body>
 </html>
